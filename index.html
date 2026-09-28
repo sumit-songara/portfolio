@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sumit Songara — student developer building web and mobile apps.">
+    <title>Sumit Songara — Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVBAR
+         Sticky at the top. Flexbox lays out logo | links | button.
+         The hamburger button only shows on mobile (see style.css).
+         ============================================================ -->
+    <header class="navbar">
+        <nav class="navbar__inner container">
+            <a href="#hero" class="navbar__logo">SS<span class="navbar__dot">.</span></a>
+
+            <button class="navbar__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="#about" class="navbar__link">About</a></li>
+                <li><a href="#skills" class="navbar__link">Skills</a></li>
+                <li><a href="#projects" class="navbar__link">Projects</a></li>
+                <li><a href="#education" class="navbar__link">Education</a></li>
+                <li><a href="#contact" class="navbar__link">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
+                        <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+             HERO
+             Split layout (text on the left, photo on the right).
+             Uses Flexbox. Text fades up with a keyframe animation.
+             ============================================================ -->
+        <section id="hero" class="hero container">
+            <div class="hero__text">
+                <p class="hero__greeting fade-up">Hi, I'm</p>
+                <h1 class="hero__name fade-up">Sumit Songara</h1>
+                <p class="hero__role fade-up">
+                    Student developer building
+                    <span class="hero__highlight">web</span> &amp;
+                    <span class="hero__highlight">mobile</span> apps.
+                </p>
+                <p class="hero__intro fade-up">
+                    I like turning everyday problems into small, useful tools —
+                    from a class timetable app to an offline music player.
+                </p>
+                <div class="hero__actions fade-up">
+                    <a href="#projects" class="btn btn--primary">View my work</a>
+                    <a href="https://github.com/sumit-songara" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
+                </div>
+            </div>
+
+            <div class="hero__image-wrap fade-up">
+                <div class="hero__blob"></div>
+                <img src="images/profile.jpg" alt="Photo of Sumit Songara" class="hero__image">
+            </div>
+        </section>
+
+        <!-- ============================================================
+             ABOUT
+             ============================================================ -->
+        <section id="about" class="section container reveal">
+            <h2 class="section__title">About me</h2>
+            <div class="about">
+                <p class="about__text">
+                    I'm a student learning web development and building projects
+                    along the way. Most of what I make starts as something I
+                    personally needed — a timetable for my batch, a music library
+                    that works without internet, or a study assistant.
+                </p>
+                <p class="about__text">
+                    I enjoy learning by building, breaking things, and fixing them
+                    again. Right now I'm focused on getting stronger at HTML, CSS
+                    and JavaScript, and exploring React and backend development.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SKILLS
+             CSS Grid with three cards. Each card holds a list of pills.
+             ============================================================ -->
+        <section id="skills" class="section container reveal">
+            <h2 class="section__title">Skills</h2>
+            <div class="skills">
+                <article class="skill-card">
+                    <h3 class="skill-card__title">Frontend</h3>
+                    <ul class="pills">
+                        <li class="pill">HTML</li>
+                        <li class="pill">CSS</li>
+                        <li class="pill">JavaScript</li>
+                        <li class="pill">TypeScript</li>
+                        <li class="pill">Tailwind CSS</li>
+                        <li class="pill">Responsive Design</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-card__title">Tools &amp; Platforms</h3>
+                    <ul class="pills">
+                        <li class="pill">Git</li>
+                        <li class="pill">GitHub</li>
+                        <li class="pill">VS Code</li>
+                        <li class="pill">Supabase</li>
+                        <li class="pill">Vite</li>
+                        <li class="pill">Expo</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-card__title">Currently Learning</h3>
+                    <ul class="pills">
+                        <li class="pill pill--learning">React</li>
+                        <li class="pill pill--learning">React Native</li>
+                        <li class="pill pill--learning">Node.js</li>
+                        <li class="pill pill--learning">Python</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PROJECTS
+             CSS Grid. Each card: preview block, title, description,
+             tech tags, links. Cards lift on hover (transition).
+             ============================================================ -->
+        <section id="projects" class="section container reveal">
+            <h2 class="section__title">Projects</h2>
+            <div class="projects">
+
+                <article class="project-card">
+                    <div class="project-card__preview project-card__preview--schedulo">
+                        <span class="project-card__mark">Sc</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Schedulo</h3>
+                        <p class="project-card__desc">
+                            A class timetable app for my batch. Students sign in with
+                            their college Google account, pick their group, and see the
+                            day's classes with rooms and teachers. Reminders fire before
+                            every class.
+                        </p>
+                        <ul class="tags">
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">React Native</li>
+                            <li class="tag">Expo</li>
+                            <li class="tag">Supabase</li>
+                        </ul>
+                        <div class="project-card__links">
+                            <a href="https://github.com/sumit-songara/schedulo" target="_blank" rel="noopener" class="link">GitHub →</a>
+                            <span class="link link--muted">Android APK only</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__preview project-card__preview--beats">
+                        <span class="project-card__mark">♪</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">OfflineBeats</h3>
+                        <p class="project-card__desc">
+                            Download a YouTube or Spotify playlist once and play it
+                            forever without internet. Runs on your laptop and is
+                            reachable from your phone over the same Wi-Fi.
+                        </p>
+                        <ul class="tags">
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">Python</li>
+                            <li class="tag">Flask</li>
+                        </ul>
+                        <div class="project-card__links">
+                            <a href="https://github.com/sumit-songara/musicApp" target="_blank" rel="noopener" class="link">GitHub →</a>
+                            <span class="link link--muted">Desktop app</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__preview project-card__preview--huddle">
+                        <span class="project-card__mark">OB</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">OpenBuilder × HuddleHQ</h3>
+                        <p class="project-card__desc">
+                            A landing page and MVP for a student builders' community,
+                            with a retro pixel-style design, a starfield hero and a
+                            Supabase backend.
+                        </p>
+                        <ul class="tags">
+                            <li class="tag">React</li>
+                            <li class="tag">TanStack</li>
+                            <li class="tag">Tailwind CSS</li>
+                            <li class="tag">Supabase</li>
+                        </ul>
+                        <div class="project-card__links">
+                            <a href="https://open-builder-mvp.vercel.app" target="_blank" rel="noopener" class="link">Live demo →</a>
+                            <a href="https://github.com/sumit-songara/Open-Builder-X-HuddleHq" target="_blank" rel="noopener" class="link">GitHub →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__preview project-card__preview--learn">
+                        <span class="project-card__mark">Ls</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Learning Software</h3>
+                        <p class="project-card__desc">
+                            An AI-powered personal learning assistant. Create a topic,
+                            ask questions, and it builds an organised knowledge base
+                            with news updates, all stored locally in SQLite.
+                        </p>
+                        <ul class="tags">
+                            <li class="tag">Python</li>
+                            <li class="tag">FastAPI</li>
+                            <li class="tag">SQLite</li>
+                        </ul>
+                        <div class="project-card__links">
+                            <a href="https://github.com/sumit-songara/learning-software" target="_blank" rel="noopener" class="link">GitHub →</a>
+                            <span class="link link--muted">Runs locally</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============================================================
+             EDUCATION / EXPERIENCE
+             A simple vertical timeline built with position: relative
+             and an absolutely positioned dot on each item.
+             ============================================================ -->
+        <section id="education" class="section container reveal">
+            <h2 class="section__title">Education &amp; Journey</h2>
+            <ol class="timeline">
+                <li class="timeline__item">
+                    <span class="timeline__date">2026 — Present</span>
+                    <h3 class="timeline__title">Web Development Course</h3>
+                    <p class="timeline__text">
+                        Learning HTML, CSS, JavaScript and responsive design by
+                        building real projects. This portfolio is my Builders Day project.
+                    </p>
+                </li>
+                <li class="timeline__item">
+                    <span class="timeline__date">2030 Batch</span>
+                    <h3 class="timeline__title">College Student</h3>
+                    <p class="timeline__text">
+                        Studying and building tools for my own batch, like Schedulo,
+                        alongside coursework.
+                    </p>
+                </li>
+                <li class="timeline__item">
+                    <span class="timeline__date">2023</span>
+                    <h3 class="timeline__title">Joined GitHub</h3>
+                    <p class="timeline__text">
+                        Started putting my projects online and learning by building.
+                    </p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ============================================================
+             CONTACT
+             Two columns on desktop (Grid): links on the left, form on
+             the right. The form is frontend-only; script.js shows a
+             thank-you message instead of sending anything.
+             ============================================================ -->
+        <section id="contact" class="section container reveal">
+            <h2 class="section__title">Let's build something together</h2>
+            <div class="contact">
+                <div class="contact__info">
+                    <p class="contact__text">
+                        Want to collaborate, ask a question, or just say hi?
+                        Reach out through any of these.
+                    </p>
+                    <ul class="contact__list">
+                        <li><a href="https://github.com/sumit-songara" target="_blank" rel="noopener" class="link">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/sumitsongara/" target="_blank" rel="noopener" class="link">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <!-- The form is sent through FormSubmit (formsubmit.co), a free
+                     service that emails the message to the address in "action".
+                     script.js sends it in the background so the page doesn't reload.
+                     Without JavaScript, the normal form submit still works. -->
+                <form class="contact__form" id="contact-form"
+                      action="https://formsubmit.co/sksongara2008@gmail.com" method="POST">
+                    <!-- Hidden settings for FormSubmit -->
+                    <input type="hidden" name="_subject" value="New message from your portfolio">
+                    <input type="hidden" name="_template" value="table">
+                    <!-- Honeypot: hidden from people, bots fill it in and get ignored -->
+                    <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Hello Sumit..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary" id="form-button">Send message</button>
+                    <p class="form-status" id="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="footer">
+        <div class="footer__inner container">
+            <p>© <span id="year">2026</span> Sumit Songara · Built with HTML, CSS &amp; a little JS</p>
+            <ul class="footer__links">
+                <li><a href="https://github.com/sumit-songara" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/sumitsongara/" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
